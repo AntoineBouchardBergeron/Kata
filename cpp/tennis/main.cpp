@@ -2,13 +2,13 @@
 // Created by Antoine Bouchard-Bergeron
 // learning again cpp
 
-#include "game.h"
+#include "gameManager.h"
 
-int Game::main()
+int main(int argc, char ** argv)
 {
-    std::cout << "Starting the tennis match!\n";
+    std::cout << "Starting the tennis match!\n"<< std::endl;
     GameManager gm = GameManager();
     gm.StartGame(1);
-
+ 
     return 0;
 };

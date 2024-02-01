@@ -12,15 +12,15 @@ class GameManager{
     Player m_two;
 
     void InitializePlayers() {
-        string one_name = string();
-        string two_name = string();
-        std::cout << "Type in first player's name";
+        string one_name;
+        string two_name;
+        std::cout << "Type in first player's name"<< std::endl;
         std::cin >> one_name;
-        std::cout << "Type in opponent's name";
+        std::cout << "Type in opponent's name"<< std::endl;
         std::cin >> two_name;
 
-        this->m_one = Player(one_name);
-        this->m_two = Player(two_name);
+        this->m_one.setName(one_name);
+        this->m_two.setName(two_name);
         this->m_one.selectOpponnent(&m_two);
     };
 

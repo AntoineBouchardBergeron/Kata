@@ -33,7 +33,7 @@ class Player {
     // void winSet();
     // void loseSet(); 
 
-    void printGameScore() {cout << "Player " << m_name << " has a score of " << m_gameScore.toString();  };
+    void printGameScore() {cout << "Player " << m_name << " has a score of " << m_gameScore.toString()<< std::endl;  };
 
 };
 

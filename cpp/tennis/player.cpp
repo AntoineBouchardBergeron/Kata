@@ -15,7 +15,7 @@ void Player::selectOpponnent (Player* opponent){
 };
 
 void Player::winExchange() {
-    std::cout << this->m_name << " won the exchange";
+    std::cout << this->m_name << " won the exchange"<< std::endl;
     switch (this->m_gameScore.getScore()){
         case 0: // Love
             this->m_gameScore.increaseScore();
