@@ -1,6 +1,5 @@
 {
     "tasks": [
-
         {
             "type": "cppbuild",
             "label": "build",
@@ -9,7 +8,7 @@
                 "-fcolor-diagnostics",
                 "-fansi-escape-codes",
                 "-g",
-                "${workspaceFolder}/main.cpp",
+                "${workspaceFolder}/*.cpp",
                 "-o",
                 "${workspaceFolder}/main.o"
             ],
