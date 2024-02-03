@@ -1,0 +1,60 @@
+@startuml class
+
+title Yatzhee Cpp Class diagram
+
+class Die {
+    - faces : int[]
+    - value : int
+    + Die() : constructor
+    + Die(int[] faces) : constructor
+    + RollDie() : int
+}
+
+note left of Die::Die()
+    Default 6 faces die
+end note
+
+note left of Die::"Die(int[] faces)"
+    Custom faces die
+end note
+
+abstract Rule {
+    - id : Int
+    # isCompleted: Bool
+    + {abstract} GetCondition(Die[] Dices) : Bool
+    + {abstract} GetCompletionPoints() : int
+    - CompleteRule(): void
+}
+
+class SpecialRules {
+    - GetCondition(Rules[] CompletedRules) : Bool
+}
+
+note left of SpecialRules
+    For example, the 50 points if 65 total points from 6 first rules
+end note
+
+Class Player {
+    name : string
+    finalScore : <int, int>
+} 
+
+note left of Player::score
+    Dictionnary to kept track of Rules and points
+end note
+
+Class Game {
+    - players : Player[]
+    - dices: Die[]
+    - rollCount: int
+    + SetActivePlayer(Player player) : void
+    + PlayTurn() : void
+    + SelectDieToRoll() : void
+}
+
+SpecialRules <|-- Rule
+Player --> Rule : uses 
+Game --o Player
+Rule --> Die : uses
+
+@enduml
