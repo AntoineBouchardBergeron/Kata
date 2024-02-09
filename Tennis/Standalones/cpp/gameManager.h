@@ -26,7 +26,7 @@ class GameManager{
 
     void PlaySet(){
     while (
-        this->m_one.getSetScore() < 5 && this->m_two.getSetScore() < 5 ||
+        (this->m_one.getSetScore() < 5 && this->m_two.getSetScore() < 5) ||
         abs(this->m_one.getSetScore() - this->m_two.getSetScore()) < 2
         )
     {

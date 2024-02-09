@@ -4,7 +4,7 @@
 
 #include "gameManager.h"
 
-int main(int argc, char ** argv)
+int main()
 {
     std::cout << "Starting the tennis match!\n"<< std::endl;
     GameManager gm = GameManager();
