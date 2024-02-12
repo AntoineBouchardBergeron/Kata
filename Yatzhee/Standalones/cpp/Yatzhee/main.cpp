@@ -1,13 +1,15 @@
-#pragma once
-
 #include <iostream>
 #include "Die.h"
 
+
+
 int main()
 {
-	std::cout << "hello World" << std::endl;
-	Die one;
-	one.printInfo();
+	Die one = Die(default_four_faces);
+	for (int i = 0; i < 20; i++){
+		one.RollDie();
+		one.printInfo();
+	}
 
 	return 0;
 };

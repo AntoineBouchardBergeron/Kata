@@ -30,7 +30,7 @@ class SpecialRules {
     - GetCondition(Rules[] CompletedRules) : Bool
 }
 
-note left of SpecialRules
+note top of SpecialRules
     For example, the 50 points if 65 total points from 6 first rules
 end note
 
