@@ -6,8 +6,12 @@
 
 int main()
 {
-    std::cout << "Starting the tennis match!\n"<< std::endl;
+    std::cout << "Starting the tennis match!"<< std::endl;
+
     GameManager gm = GameManager();
+
+    std::cout << "Game is about to start!" << std::endl;
+
     gm.StartGame(1);
  
     return 0;

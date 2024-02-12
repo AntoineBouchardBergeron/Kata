@@ -10,8 +10,9 @@ Player::Player(string name)
     };
 
 void Player::selectOpponnent (Player* opponent){
+    std::cout << "Selecting opponents" << std::endl;
     this->p_opponent = opponent;
-    opponent->selectOpponnent(this);
+    this->p_opponent->p_opponent = this;
 };
 
 void Player::winExchange() {
@@ -57,6 +58,10 @@ void Player::winExchange() {
 void Player::loseExchange() {
     this->m_gameScore.decreaseScore();
 }
+
+void Player::setName(string name){
+    this->m_name = name;
+};
 
 void Player::winGame() {
     this->m_setScores++;

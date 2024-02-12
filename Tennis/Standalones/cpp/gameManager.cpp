@@ -5,7 +5,7 @@ GameManager::GameManager() {
 };
 
 void GameManager::StartGame(int sets) {
-    m_numberOfSets = sets;
+    this->m_numberOfSets = sets;
 
     std::cout << "Number of sets not yet implemented, playing only one.\n"<< std::endl;
     this->PlaySet();
