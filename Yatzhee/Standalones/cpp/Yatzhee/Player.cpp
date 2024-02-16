@@ -3,6 +3,6 @@
 Player::Player(){};
 
 Player::Player(string Name){
-    this->name = Name;
+    this->_name = Name;
 };
 

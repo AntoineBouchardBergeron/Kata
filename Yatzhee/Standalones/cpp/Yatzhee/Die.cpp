@@ -1,20 +1,26 @@
 
 #include "Die.h"
 #include <iostream>
+#include <array>
 
-Die::Die(){};
-
-Die::Die(const int * faces):
-	m_faces(faces)
-{};
-Die::~Die(){
-	delete m_faces;
+Die::Die(){
+	this->m_faces = default_six_faces;
+	this->m_faces_number = default_number_faces;
 };
-void Die::printInfo() {
-	std::cout << "This die rolled a " << this->m_value << std::endl;
+
+Die::Die(const int * faceValues, int faces)
+{
+	this->m_faces = faceValues;
+	this->m_faces_number = faces;
+};
+Die::~Die(){
+	// delete m_faces; // apparently, this delete was not required.
+};
+void Die::PrintInfo() {
+	std::cout << "This " << this->m_faces_number << " die rolled a " << this->m_value << std::endl;
 };
 
 int Die::RollDie() {
-	this->m_value = this->m_faces[ (rand() % ( *(&this->m_faces + 1) - this->m_faces)) ];
+	this->m_value = this->m_faces[ (rand() % this->m_faces_number) ];
 	return this->m_value;
 }

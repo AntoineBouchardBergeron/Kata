@@ -1,15 +1,15 @@
 #include <iostream>
 #include "Die.h"
+#include "Game.h"
 
-
+using namespace std;
 
 int main()
 {
-	Die one = Die(default_four_faces);
-	for (int i = 0; i < 20; i++){
-		one.RollDie();
-		one.printInfo();
-	}
+	cout << "Starting yathzee game" << endl;
+	srand ( time(NULL) );
+
+	Game game;
 
 	return 0;
 };

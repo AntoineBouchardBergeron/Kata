@@ -3,16 +3,21 @@
 #include <string>
 #include "Rule.h"
 
-using namespace std; 
+using namespace std;
 
-class Player{
+class Player
+{
 private:
-    string name;
-    Rule Rules[20];
+    string _name;
+    Rule *_Rules;
 
 public:
     Player();
     Player(string Name);
-    void SetName(string name);
+    void SetName(string name)
+    {
+        this->_name = name;
+    };
     void CompleteSet(int id);
+    string GetName() { return this->_name; };
 };

@@ -14,5 +14,16 @@
         "environment": [],
         "console": "internalConsole",
         "preLaunchTask": "C/C++: g++.exe build all files windows"
+      },
+      {
+        "name": "C/C++: run all on mac",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/main.o",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "preLaunchTask": "macOs"
       }]
 }
